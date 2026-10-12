@@ -70,7 +70,7 @@
     "Select data source": "Selecteer gegevensbron",
     "Select object or remove %s and %u from text": "Selecteer object of verwijder %s en %u uit tekst",
     "Set icon, text color or background color override": "Stel pictogram, tekstkleur of achtergrondkleur override in",
-    "Set valid number ('less than' must be less than 'greater than')": "Voer een geldig getal in ('kleiner dan' moet kleiner zijn dan 'groter dan')",
+    "Set valid number ('less than' must not be greater than 'greater than')": "Voer een geldig getal in ('kleiner dan' mag niet groter zijn dan 'groter dan')",
     "Should be type of string or number": "Moet type tekenreeks of getal zijn",
     "Source instance": "Broninstantie",
     "Step size": "Stapgrootte",

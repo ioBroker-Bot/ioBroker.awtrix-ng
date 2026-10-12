@@ -70,7 +70,7 @@
     "Select data source": "Seleccionar fuente de datos",
     "Select object or remove %s and %u from text": "Seleccionar objeto o eliminar %s y %u del texto",
     "Set icon, text color or background color override": "Establecer anulación de icono, color de texto o color de fondo",
-    "Set valid number ('less than' must be less than 'greater than')": "Introduzca un número válido ('menor que' debe ser menor que 'mayor que')",
+    "Set valid number ('less than' must not be greater than 'greater than')": "Introduzca un número válido ('menor que' no debe ser mayor que 'mayor que')",
     "Should be type of string or number": "Debe ser tipo de cadena o número",
     "Source instance": "Instancia de origen",
     "Step size": "Numero de pie",

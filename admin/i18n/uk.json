@@ -70,7 +70,7 @@
     "Select data source": "Виберіть джерело даних",
     "Select object or remove %s and %u from text": "Виберіть об’єкт або видаліть %s і %u з тексту",
     "Set icon, text color or background color override": "Установити піктограму, змінити колір тексту чи фону",
-    "Set valid number ('less than' must be less than 'greater than')": "Введіть дійсне число ('менше ніж' має бути меншим за 'більше ніж')",
+    "Set valid number ('less than' must not be greater than 'greater than')": "Введіть дійсне число ('менше ніж' не може бути більшим за 'більше ніж')",
     "Should be type of string or number": "Має бути тип рядка або число",
     "Source instance": "Вихідний екземпляр",
     "Step size": "Розмір кроку",

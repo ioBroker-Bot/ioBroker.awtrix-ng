@@ -500,8 +500,8 @@
                             "xl": 2,
                             "default": 0,
                             "step": 0.1,
-                            "validator": "!isNaN(data.thresholdLtValue) && (!data.thresholdGtActive || data.thresholdLtValue < data.thresholdGtValue)",
-                            "validatorErrorText": "Set valid number ('less than' must be less than 'greater than')",
+                            "validator": "!isNaN(data.thresholdLtValue) && (!data.thresholdGtActive || data.thresholdLtValue <= data.thresholdGtValue)",
+                            "validatorErrorText": "Set valid number ('less than' must not be greater than 'greater than')",
                             "validatorNoSaveOnError": true
                         },
                         {
@@ -573,8 +573,8 @@
                             "xl": 2,
                             "default": 100,
                             "step": 0.1,
-                            "validator": "!isNaN(data.thresholdGtValue) && (!data.thresholdLtActive || data.thresholdLtValue < data.thresholdGtValue)",
-                            "validatorErrorText": "Set valid number ('less than' must be less than 'greater than')",
+                            "validator": "!isNaN(data.thresholdGtValue) && (!data.thresholdLtActive || data.thresholdLtValue <= data.thresholdGtValue)",
+                            "validatorErrorText": "Set valid number ('less than' must not be greater than 'greater than')",
                             "validatorNoSaveOnError": true
                         },
                         {

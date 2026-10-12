@@ -70,7 +70,7 @@
     "Select data source": "选择数据源",
     "Select object or remove %s and %u from text": "选择对象或从文本中删除 %s 和 %u",
     "Set icon, text color or background color override": "设置图标、文本颜色或背景颜色覆盖",
-    "Set valid number ('less than' must be less than 'greater than')": "请输入有效数字（'小于'的值必须小于'大于'的值）",
+    "Set valid number ('less than' must not be greater than 'greater than')": "请输入有效数字（'小于'的值不得大于'大于'的值）",
     "Should be type of string or number": "应该是字符串或数字类型",
     "Source instance": "源实例",
     "Step size": "一步的大小",

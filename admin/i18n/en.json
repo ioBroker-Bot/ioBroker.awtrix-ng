@@ -70,7 +70,7 @@
     "Select data source": "Select data source",
     "Select object or remove %s and %u from text": "Select object or remove %s and %u from text",
     "Set icon, text color or background color override": "Set icon, text color or background color override",
-    "Set valid number ('less than' must be less than 'greater than')": "Set valid number ('less than' must be less than 'greater than')",
+    "Set valid number ('less than' must not be greater than 'greater than')": "Set valid number ('less than' must not be greater than 'greater than')",
     "Should be type of string or number": "Should be type of string or number",
     "Source instance": "Source instance",
     "Step size": "Step size",

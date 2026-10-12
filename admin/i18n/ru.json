@@ -70,7 +70,7 @@
     "Select data source": "Выберите источник данных",
     "Select object or remove %s and %u from text": "Выберите объект или удалите %s и %u из текста",
     "Set icon, text color or background color override": "Установка значка, цвета текста или фонового цвета",
-    "Set valid number ('less than' must be less than 'greater than')": "Введите допустимое число ('меньше' должно быть меньше, чем 'больше')",
+    "Set valid number ('less than' must not be greater than 'greater than')": "Введите допустимое число ('меньше' не должно быть больше, чем 'больше')",
     "Should be type of string or number": "Должен быть типом строки или числа",
     "Source instance": "Исходный экземпляр",
     "Step size": "Размер шага",
