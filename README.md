@@ -41,6 +41,10 @@ Buy TC002 here: [Amazon.de](https://haus-auto.com/p/amz/UlanziTC002) or here: [u
     Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+
+* (@klein0r) Added state `display.overlay` to set a global weather overlay for all apps
+
 ### 0.5.0 (2026-10-12)
 
 * (@klein0r) Icons of custom and history apps can be selected from the icons of the device in the instance configuration

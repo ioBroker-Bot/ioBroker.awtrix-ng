@@ -1720,6 +1720,41 @@
       "native": {}
     },
     {
+      "_id": "display.overlay",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Weather overlay (all apps)",
+          "de": "Wetter-Overlay (alle Apps)",
+          "ru": "Погодный оверлей (все приложения)",
+          "pt": "Sobreposição meteorológica (todas as apps)",
+          "nl": "Weeroverlay (alle apps)",
+          "fr": "Superposition météo (toutes les applications)",
+          "it": "Overlay meteo (tutte le app)",
+          "es": "Superposición meteorológica (todas las apps)",
+          "pl": "Nakładka pogodowa (wszystkie aplikacje)",
+          "uk": "Погодний оверлей (усі застосунки)",
+          "zh-cn": "天气叠加（所有应用）"
+        },
+        "desc": "Global weather overlay on top of all apps (none = off)",
+        "type": "string",
+        "role": "state",
+        "read": true,
+        "write": true,
+        "def": "none",
+        "states": {
+          "none": "none",
+          "drizzle": "drizzle",
+          "frost": "frost",
+          "rain": "rain",
+          "snow": "snow",
+          "storm": "storm",
+          "thunder": "thunder"
+        }
+      },
+      "native": {}
+    },
+    {
       "_id": "display.brightness",
       "type": "state",
       "common": {

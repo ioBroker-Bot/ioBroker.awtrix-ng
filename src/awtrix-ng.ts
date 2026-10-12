@@ -26,7 +26,15 @@ import { Mp3 } from './lib/audio/mp3';
 import { Radio } from './lib/audio/radio';
 import { screenToSvg } from './lib/screen';
 
-type ResyncStep = 'settings' | 'capabilities' | 'audio' | 'apps' | 'indicators' | 'moodlight' | 'screenContent';
+type ResyncStep =
+    | 'settings'
+    | 'capabilities'
+    | 'display'
+    | 'audio'
+    | 'apps'
+    | 'indicators'
+    | 'moodlight'
+    | 'screenContent';
 
 /** Features of the connected device (defaults until the capabilities have been loaded) */
 type DeviceCapabilities = {
@@ -362,6 +370,20 @@ export class AwtrixNg extends utils.Adapter {
                         })
                         .catch(error => {
                             this.log.warn(`(power) Unable to execute action: ${error}`);
+                        });
+                } else if (idNoNamespace === 'display.overlay') {
+                    const overlay = state.val ? String(state.val) : 'none';
+                    this.log.debug(`changing global weather overlay to ${overlay}`);
+
+                    (overlay === 'none'
+                        ? this.apiClient.display.clearOverlay()
+                        : this.apiClient.display.setOverlay(overlay)
+                    )
+                        .then(async () => {
+                            await this.setState(idNoNamespace, { val: overlay, ack: true });
+                        })
+                        .catch(error => {
+                            this.log.warn(`(overlay) Unable to execute action: ${error}`);
                         });
                 } else if (idNoNamespace === 'device.sleep') {
                     if (!this.capabilities.sleep) {
@@ -708,6 +730,7 @@ export class AwtrixNg extends utils.Adapter {
         const steps: Array<[ResyncStep, () => Promise<unknown>]> = [
             ['settings', () => this.refreshSettings()],
             ['capabilities', () => this.refreshCapabilities()],
+            ['display', () => this.refreshDisplay()],
             ['audio', () => this.refreshAudio(true)],
             ['apps', () => this.createAppObjects()],
             ['indicators', () => this.updateAllIndicatorsByStates()],
@@ -975,6 +998,23 @@ export class AwtrixNg extends utils.Adapter {
         }
 
         await this.extendObject('settings.apps.transitionEffect', { common: { states } });
+
+        // Weather overlays (global)
+        const overlayStates: { [key: string]: string } = {};
+        for (const overlay of this.getWeatherOverlays()) {
+            overlayStates[overlay] = overlay;
+        }
+
+        await this.extendObject('display.overlay', { common: { states: overlayStates } });
+    }
+
+    /**
+     * State of the display which is not part of GET device (e.g. global weather overlay)
+     */
+    private async refreshDisplay(): Promise<void> {
+        const display = await this.apiClient!.display.get();
+
+        await this.setStateChangedAsync('display.overlay', { val: display.overlay || 'none', ack: true });
     }
 
     /**
