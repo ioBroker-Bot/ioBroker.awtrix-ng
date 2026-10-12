@@ -41,9 +41,12 @@ Buy TC002 here: [Amazon.de](https://haus-auto.com/p/amz/UlanziTC002) or here: [u
     Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
 -->
-### 0.4.0 (2026-10-08)
+### **WORK IN PROGRESS**
 
 * (@klein0r) Custom apps: thresholds "less than" and "greater than" may now have the same value
+
+### 0.4.0 (2026-10-08)
+
 * (@klein0r) `apps.<name>.enabled` switches just this app on or off (firmware 1.2.2)
 * (@klein0r) Updated recommended Awtrix NG firmware version to 1.2.2
 * (@klein0r) Added state `device.usbPower` (device is connected to USB power, e.g. TC002)
