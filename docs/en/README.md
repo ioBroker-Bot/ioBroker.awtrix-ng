@@ -216,6 +216,8 @@ Expert apps are available since apdater version 0.10.0. They allow to set all va
 
 After that, all controllable states for the app name `test` will be created in `awtrix-ng.0.apps.test`. Just set values of `icon`, `text` and other states by using your own scripts and logic (e.g. JavaScript or Blockly).
 
+Example: [Weather app](weather-app.md) (current weather of ioBroker.openweathermap)
+
 #### Base Object
 
 The base object is a basic defition of an awtrix app to allow all possible attributes. *The base object will be extended with other attributes of the expert app.*

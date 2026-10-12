@@ -216,6 +216,8 @@ Experten-Apps sind seit Adapter-Version 0.10.0 verfügbar. Diese Apps erlauben e
 
 Danach werden alle steuerbaren Zustände der App `test` unter `awtrix-ng.0.apps.test` erstellt. Um die jeweiligen Werte einer App zu verändern, kann einfach der Wert der Zustände `icon`, `text`, usw. mit eigenen Scripts (z.B. JavaScript oder Blockly) gesetzt werden.
 
+Beispiel: [Wetter-App](weather-app.md) (aktuelles Wetter aus ioBroker.openweathermap)
+
 #### Basisobjekte
 
 Das Basisobjekt ist eine grundlegende Definition für eine Awtrix-App, um alle existierenden Optionen setzen zu können. *Das Basisobjekt wird mit allen anderen Attributen der Experten-App erweitert.*
