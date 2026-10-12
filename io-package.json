@@ -1103,6 +1103,146 @@
       }
     },
     {
+      "_id": "settings.audio",
+      "type": "channel",
+      "common": {
+        "name": {
+          "en": "Audio settings",
+          "de": "Audio-Einstellungen",
+          "ru": "Настройки звука",
+          "pt": "Definições de áudio",
+          "nl": "Audio-instellingen",
+          "fr": "Paramètres audio",
+          "it": "Impostazioni audio",
+          "es": "Ajustes de audio",
+          "pl": "Ustawienia dźwięku",
+          "uk": "Налаштування звуку",
+          "zh-cn": "音频设置"
+        }
+      },
+      "native": {}
+    },
+    {
+      "_id": "settings.audio.volume",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Master volume",
+          "de": "Master-Lautstärke",
+          "ru": "Общая громкость (Master)",
+          "pt": "Volume master",
+          "nl": "Mastervolume",
+          "fr": "Volume master",
+          "it": "Volume master",
+          "es": "Volumen maestro",
+          "pl": "Głośność główna (Master)",
+          "uk": "Загальна гучність (Master)",
+          "zh-cn": "主音量"
+        },
+        "type": "number",
+        "role": "level.volume",
+        "read": true,
+        "write": true,
+        "min": 0,
+        "max": 100,
+        "unit": "%",
+        "desc": "Master volume (0 = all sounds muted)"
+      },
+      "native": {
+        "settingsKey": "volume"
+      }
+    },
+    {
+      "_id": "settings.audio.radioVolume",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Radio volume",
+          "de": "Radio-Lautstärke",
+          "ru": "Громкость радио",
+          "pt": "Volume do rádio",
+          "nl": "Radiovolume",
+          "fr": "Volume radio",
+          "it": "Volume radio",
+          "es": "Volumen de radio",
+          "pl": "Głośność radia",
+          "uk": "Гучність радіо",
+          "zh-cn": "电台音量"
+        },
+        "type": "number",
+        "role": "level.volume",
+        "read": true,
+        "write": true,
+        "min": 0,
+        "max": 100,
+        "unit": "%",
+        "desc": "Share of the master volume for the internet radio (devices with radio only, e.g. TC002)"
+      },
+      "native": {
+        "settingsKey": "radioVolume"
+      }
+    },
+    {
+      "_id": "settings.audio.appVolume",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Apps volume",
+          "de": "Apps-Lautstärke",
+          "ru": "Громкость приложений",
+          "pt": "Volume das apps",
+          "nl": "Volume apps",
+          "fr": "Volume des applications",
+          "it": "Volume app",
+          "es": "Volumen de apps",
+          "pl": "Głośność aplikacji",
+          "uk": "Гучність застосунків",
+          "zh-cn": "应用音量"
+        },
+        "type": "number",
+        "role": "level.volume",
+        "read": true,
+        "write": true,
+        "min": 0,
+        "max": 100,
+        "unit": "%",
+        "desc": "Share of the master volume for sounds of scripts"
+      },
+      "native": {
+        "settingsKey": "appVolume"
+      }
+    },
+    {
+      "_id": "settings.audio.alertVolume",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Alerts volume",
+          "de": "Alerts-Lautstärke",
+          "ru": "Громкость оповещений",
+          "pt": "Volume dos alertas",
+          "nl": "Volume meldingen",
+          "fr": "Volume des alertes",
+          "it": "Volume avvisi",
+          "es": "Volumen de alertas",
+          "pl": "Głośność alertów",
+          "uk": "Гучність сповіщень",
+          "zh-cn": "提醒音量"
+        },
+        "type": "number",
+        "role": "level.volume",
+        "read": true,
+        "write": true,
+        "min": 0,
+        "max": 100,
+        "unit": "%",
+        "desc": "Share of the master volume for notification sounds, MP3 files and melodies"
+      },
+      "native": {
+        "settingsKey": "alertVolume"
+      }
+    },
+    {
       "_id": "meta",
       "type": "channel",
       "common": {

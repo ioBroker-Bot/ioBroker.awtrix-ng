@@ -43,6 +43,7 @@ Buy TC002 here: [Amazon.de](https://haus-auto.com/p/amz/UlanziTC002) or here: [u
 -->
 ### **WORK IN PROGRESS**
 
+* (@klein0r) Added volume settings (`settings.audio.volume`, `.alertVolume`, `.appVolume`, `.radioVolume`)
 * (@klein0r) Custom apps: thresholds "less than" and "greater than" may now have the same value
 
 ### 0.4.0 (2026-10-08)
