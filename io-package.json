@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "awtrix-ng",
-    "version": "0.4.0",
+    "version": "0.5.0",
     "news": {
+      "0.5.0": {
+        "en": "Icons of custom and history apps can be selected from the icons of the device in the instance configuration\nAdded volume settings (`settings.audio.volume`, `.alertVolume`, `.appVolume`, `.radioVolume`)\nCustom apps: thresholds \"less than\" and \"greater than\" may now have the same value",
+        "de": "In der Instanzkonfiguration können Sie unter den Gerätesymbolen eigene Apps und History Apps auswählen\nLautstärke hinzugefügt (`settings.audio.volume`, `.alertVolume`, `.appVolume`, `.radioVolume`)\nEigene Apps: Die Werte „unter“ und „über“ können nun den gleichen Wert haben",
+        "ru": "Иконки пользовательских и исторических приложений можно выбрать из значков устройства в конфигурации экземпляра\nДобавлены настройки громкости (`settings.audio.volume`, `.alertVolume`, `.appVolume`, `.radiovolume`)\nНастраиваемые приложения: пороговые значения «меньше» и «больше» теперь могут иметь одно и то же значение",
+        "pt": "Você pode selecionar ícones de apps personalizados e históricos na configuração da instância\nAdição de ajustes de volume (`settings.audio.volume`, `.alertVolume`, `.appVolume`)\nApps personalizados: limites “menor que” e “maior que” agora têm o mesmo valor",
+        "nl": "Pictogrammen van apps op maat en apps met geschiedenis kunnen worden geselecteerd uit de pictogrammen van het apparaat in de instantieconfiguratie\nVolume-instellingen toegevoegd (`settings.audio.volume`, `.alertVolume`, `.AppVolume`, `.RadioVolume`)\nApps op maat: de drempels „kleiner dan” en „groter dan” hebben nu mogelijk dezelfde waarde",
+        "fr": "Les icônes des apps personnalisées et historiques peuvent être sélectionnées sur l'appareil dans la configuration de l'instance\nAjout de réglages de volume (`settings.audio.volume`, `.AlertVolume`, `.AppVolume`, `.RadioVolume`)\nApps personnalisées : les seuils « inférieur » et « supérieur à » ont désormais la même valeur",
+        "it": "Le icone delle app personalizzate e di cronologia sono selezionabili tra le istanze\nAggiunte impostazioni di volume (`settings.audio.volume`, `.alertVolume`, `.radioVolume`)\nApp personalizzate: le soglie «minore di» e «maggiore di» ora hanno lo stesso valore",
+        "es": "Los iconos de las aplicaciones personalizadas e históricas se pueden seleccionar en la configuración de la instancia\nAjustes de volumen añadidos (`settings.audio.volume`, `.alertVolume`, `.AppVolume`, `.RadioVolume`)\nAplicaciones personalizadas: los umbrales «menor que» y «mayor que» ahora tienen el mismo valor",
+        "pl": "Ikony aplikacji niestandardowych i historii można wybrać spośród ikon urządzenia w konfiguracji instancji\nDodano ustawienia głośności (`settings.audio.volume`, `.alertVolume`, `.AppVolume`, `.RadioVolume`)\nAplikacje niestandardowe: progi „mniejsze niż” i „większe niż” mogą teraz mieć tę samą wartość",
+        "uk": "Іконки користувацьких програм та програм історії можна вибрати з піктограм пристрою в конфігурації екземпляра\nДодано налаштування гучності (`налаштування.audio.volume`, `.alertVolume`, `.AppVolume`, `.RadioVolume`)\nКористувальницькі програми: пороги «менше» та «більше ніж» тепер можуть мати однакове значення",
+        "zh-cn": "可以在实例配置中从设备的图标中选择自定义和历史应用程序的图标\n添加了音量设置（`settings.audio.volume`、`.alertVolume`、`.appVolume`、`.radioVolume`、`.radioVolume`）\n自定义应用程序：“小于” 和 “大于” 的阈值现在可能具有相同的值"
+      },
       "0.4.0": {
         "en": "`apps.<name>.enabled` switches just this app on or off (firmware 1.2.2)\nUpdated recommended Awtrix NG firmware version to 1.2.2\nAdded state `device.usbPower` (device is connected to USB power, e.g. TC002)\n**Breaking change:** `sendTo` uses the sound format of firmware 1.2.0: `audio` takes `file` (instead of `sound`, `mp3`, `melody`, ...), notifications take `sound` as name or sound object (`soundRtttl` / `soundLoop` were removed), `textCenter` was replaced by `textAlign`\n**Breaking change:** Renamed settings states to the names of the device settings (e.g. `settings.brightness.value` -> `settings.brightness.brightness`, `settings.apps.transitionSpeed` -> `settings.apps.transitionDurationMs`) - old objects are deleted automatically\nSleep mode (`device.sleep`) is blocked on devices without timed sleep (e.g. TC002 would not wake up again)\nScroll speed setting (`settings.text.scroll.speed`) allows up to 500 % now",
         "de": "`Apps. <name>.aktiviert nur diese App an oder aus (Firmware 1.2.2)\nEmpfohlene Astrix NG-Firmware auf 1.2.2 aktualisiert\nStatus `Device.USBPower` hinzugefügt (Gerät ist an USB angeschlossen, z. B. TC002)\n**Wichtige Änderung: ** `SendTo` nutzt das Soundformat der Firmware 1.2.0: `Audio` nimmt `Datei` (statt `sound`, `mp3`, `melody`,...), Benachrichtigungen haben `Sound` als Namen oder Soundobjekt (`SoundRTTTL`/ `SoundLoop` wurden entfernt), `TextCenter` wurde durch `TextAlign` ersetzt\n**Wichtige Änderung: ** Umbenannte Einstellungen in die Namen der Geräteeinstellungen (z. B. `settings.brightness.value` -> `settings.brightness`, `settings.apps.transitionSpeed` -> `settings.apps.transitionDurationMS`) — alte Objekte werden automatisch gelöscht\nDer Ruhemodus (`device.sleep`) ist auf Geräten ohne Ruhezeit gesperrt (TC002 wacht z. B. nicht wieder auf)\nScrollgeschwindigkeit (`settings.text.scroll.speed`) erlaubt jetzt bis zu 500%",
@@ -80,19 +93,6 @@
         "pl": "Usunięto opcję automatycznego usuwania innych aplikacji\nZaktualizowane logo",
         "uk": "Видалено опцію автоматичного видалення інших програм\nОновлений логотип",
         "zh-cn": "已移除自动删除其他应用的选项\n更新后的标志"
-      },
-      "0.0.8": {
-        "en": "Added more settings\nFixed Blockly code generation",
-        "de": "Weitere Einstellungen hinzugefügt\nFehler bei der Blockly-Codegenerierung behoben",
-        "ru": "Добавлены дополнительные настройки.\nИсправлена генерация кода Blockly",
-        "pt": "Adicionadas mais configurações\nCorreção na geração de código Blockly",
-        "nl": "Meer instellingen toegevoegd\nDe code-generatie van Blockly is gecorrigeerd.",
-        "fr": "Ajout de paramètres supplémentaires\nGénération de code Blockly corrigée",
-        "it": "Sono state aggiunte altre impostazioni\nGenerazione del codice Blockly corretta",
-        "es": "Se agregaron más configuraciones\nGeneración de código Blockly corregida",
-        "pl": "Dodano więcej ustawień\nNaprawiono generowanie kodu Blockly",
-        "uk": "Додано більше налаштувань\nВиправлена генерація блочного коду",
-        "zh-cn": "新增更多设置\n修复了 Blockly 代码生成问题"
       }
     },
     "titleLang": {

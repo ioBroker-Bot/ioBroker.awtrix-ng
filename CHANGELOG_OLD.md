@@ -1,4 +1,10 @@
 # Older changes
+## 0.0.10 (2026-08-07)
+
+* (@klein0r) Updated documentation
+* (@klein0r) Recommended Awtrix NG version is now 1.0.15
+* (@klein0r) Automatically cast icon value to string in notifications
+
 ## 0.0.9 (2026-08-06)
 
 * (@klein0r) Removed option to automatically delete other apps

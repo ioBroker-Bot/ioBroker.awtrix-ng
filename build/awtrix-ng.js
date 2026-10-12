@@ -364,6 +364,13 @@ class AwtrixNg extends utils.Adapter {
           this.capabilities.effects.map((v) => ({ value: v, label: v })),
           obj.callback
         );
+      } else if (obj.command === "getIcons") {
+        this.getIconList().then((icons) => {
+          this.sendTo(obj.from, obj.command, icons, obj.callback);
+        }).catch((error) => {
+          this.log.debug(`[onMessage <getIcons>] Unable to get icons: ${error}`);
+          this.sendTo(obj.from, obj.command, [], obj.callback);
+        });
       } else if (obj.command === "notification" && typeof obj.message === "object") {
         if (this.apiClient && this.apiConnected) {
           const msgFiltered = Object.fromEntries(
@@ -464,6 +471,19 @@ class AwtrixNg extends utils.Adapter {
     } else if (obj.callback) {
       this.sendTo(obj.from, obj.command, { error: "Invalid message" }, obj.callback);
     }
+  }
+  /**
+   * Icons stored on the device (folder /ICONS) for the admin selection
+   */
+  async getIconList() {
+    if (!this.apiClient || !this.apiConnected) {
+      return [];
+    }
+    const fileList = await this.apiClient.files.list("/ICONS");
+    const names = new Set(
+      fileList.files.filter((f) => /\.(gif|jpg)$/i.test(f.name)).map((f) => f.name.replace(/\.(gif|jpg)$/i, ""))
+    );
+    return [...names].sort((a, b) => a.localeCompare(b, void 0, { numeric: true })).map((name) => ({ value: name, label: name }));
   }
   async setApiConnected(connection) {
     if (connection !== this.apiConnected) {
@@ -599,7 +619,7 @@ class AwtrixNg extends utils.Adapter {
       this.currentVersion = String(content.version);
       if (this.currentVersion && this.isNewerVersion(this.currentVersion, this.supportedVersion) && !this.displayedVersionWarning) {
         this.log.warn(
-          `You should update your Awtrix NG - supported version of this adapter is ${this.supportedVersion} (or later). Your current version is ${this.currentVersion}`
+          `You should update your Awtrix NG firmware - supported version of this adapter is ${this.supportedVersion} (or later). Your current version is ${this.currentVersion}`
         );
         this.displayedVersionWarning = true;
       }

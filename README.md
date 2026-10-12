@@ -41,7 +41,7 @@ Buy TC002 here: [Amazon.de](https://haus-auto.com/p/amz/UlanziTC002) or here: [u
     Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.5.0 (2026-10-12)
 
 * (@klein0r) Icons of custom and history apps can be selected from the icons of the device in the instance configuration
 * (@klein0r) Added volume settings (`settings.audio.volume`, `.alertVolume`, `.appVolume`, `.radioVolume`)
@@ -92,12 +92,6 @@ Buy TC002 here: [Amazon.de](https://haus-auto.com/p/amz/UlanziTC002) or here: [u
 
 * (@klein0r) Used new audio API endpoint for all types of sounds (file, mp3, rtttl)
 * (@klein0r) Recommended Awtrix NG version is now 1.1.0
-
-### 0.0.10 (2026-08-07)
-
-* (@klein0r) Updated documentation
-* (@klein0r) Recommended Awtrix NG version is now 1.0.15
-* (@klein0r) Automatically cast icon value to string in notifications
 
 [Older changelogs can be found there](CHANGELOG_OLD.md)
 
