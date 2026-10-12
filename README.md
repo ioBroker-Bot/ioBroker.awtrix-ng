@@ -43,6 +43,7 @@ Buy TC002 here: [Amazon.de](https://haus-auto.com/p/amz/UlanziTC002) or here: [u
 -->
 ### **WORK IN PROGRESS**
 
+* (@klein0r) Icons of custom and history apps can be selected from the icons of the device in the instance configuration
 * (@klein0r) Added volume settings (`settings.audio.volume`, `.alertVolume`, `.appVolume`, `.radioVolume`)
 * (@klein0r) Custom apps: thresholds "less than" and "greater than" may now have the same value
 

@@ -505,6 +505,16 @@ export class AwtrixNg extends utils.Adapter {
                     this.capabilities.effects.map(v => ({ value: v, label: v })),
                     obj.callback,
                 );
+            } else if (obj.command === 'getIcons') {
+                // Icons stored on the device (admin selection) - value without extension (device looks for .gif, then .jpg)
+                this.getIconList()
+                    .then(icons => {
+                        this.sendTo(obj.from, obj.command, icons, obj.callback);
+                    })
+                    .catch(error => {
+                        this.log.debug(`[onMessage <getIcons>] Unable to get icons: ${error}`);
+                        this.sendTo(obj.from, obj.command, [], obj.callback);
+                    });
             } else if (obj.command === 'notification' && typeof obj.message === 'object') {
                 // Notification
                 if (this.apiClient && this.apiConnected) {
@@ -637,6 +647,26 @@ export class AwtrixNg extends utils.Adapter {
         } else if (obj.callback) {
             this.sendTo(obj.from, obj.command, { error: 'Invalid message' }, obj.callback);
         }
+    }
+
+    /**
+     * Icons stored on the device (folder /ICONS) for the admin selection
+     */
+    private async getIconList(): Promise<Array<{ value: string; label: string }>> {
+        if (!this.apiClient || !this.apiConnected) {
+            return [];
+        }
+
+        const fileList = await this.apiClient.files.list('/ICONS');
+
+        // same icon as .gif and .jpg is just listed once
+        const names = new Set(
+            fileList.files.filter(f => /\.(gif|jpg)$/i.test(f.name)).map(f => f.name.replace(/\.(gif|jpg)$/i, '')),
+        );
+
+        return [...names]
+            .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+            .map(name => ({ value: name, label: name }));
     }
 
     private async setApiConnected(connection: boolean): Promise<void> {
